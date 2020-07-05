@@ -20,11 +20,23 @@ public class duration {
 	/*
 	 * CONSTANTS
 	 */
+	/*
+	final private int T_NOTIME = 0;
 	final private int T_MILLISECS = 1;
 	final private int T_SECS = 2;
 	final private int T_MINS = 3;
 	final private int T_HOURS = 4;
 	final private int T_DAYS = 5;
+	*/
+	
+	private enum timeUnitType {
+		T_NOTIME,
+		T_MILLISECS, 
+		T_SECS,
+		T_MINS,
+		T_HOURS,
+		T_DAYS
+	}
 
 	/*
 	 * MEMEBERS VARIABLES
@@ -35,7 +47,7 @@ public class duration {
 	private double dec = 0.0;
 	private double time = 0.0;
 	private String strTimeUnit;
-	private int t_timeUnit;
+	private timeUnitType t_timeUnit;
 	private String strDuration;
 	
 	/*
@@ -60,13 +72,13 @@ public class duration {
 	 * @param strTimeUnit The duration units in String format.
 	 * @return the type of the time unit.
 	 */
-	private int tTimeUnit(String strTimeUnit) {
-		if (strTimeUnit.equalsIgnoreCase("ms")) return T_MILLISECS;
-		if (strTimeUnit.equalsIgnoreCase("s")) return T_SECS;
-		if (strTimeUnit.equalsIgnoreCase("m")) return T_MINS;
-		if (strTimeUnit.equalsIgnoreCase("h")) return T_HOURS;
-		if (strTimeUnit.equalsIgnoreCase("d")) return T_DAYS;
-		return 0;
+	private timeUnitType tTimeUnit(String strTimeUnit) {
+		if (strTimeUnit.equalsIgnoreCase("ms")) return timeUnitType.T_MILLISECS;
+		if (strTimeUnit.equalsIgnoreCase("s")) return timeUnitType.T_SECS;
+		if (strTimeUnit.equalsIgnoreCase("m")) return timeUnitType.T_MINS;
+		if (strTimeUnit.equalsIgnoreCase("h")) return timeUnitType.T_HOURS;
+		if (strTimeUnit.equalsIgnoreCase("d")) return timeUnitType.T_DAYS;
+		return timeUnitType.T_NOTIME;
 	}
 	
 	/**
@@ -92,7 +104,9 @@ public class duration {
 			case T_HOURS: 		h = this.getVal(24);
 								d = (long)time;
 								break;
-			case T_DAYS: d = this.duration;
+			case T_DAYS: 	d = this.duration;
+							break;
+			case T_NOTIME: strDuration = "NO TIME DEFINED";
 		}
 		strDuration = String.format("%d(d) %02d:%02d:%02d.%03d", d, h, m, s, ms);		
 	}
