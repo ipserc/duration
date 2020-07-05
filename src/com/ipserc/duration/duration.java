@@ -97,7 +97,8 @@ public class duration {
 								break;
 			case T_DAYS: 	d = this.duration;
 							break;
-			case T_NOTIME: strDuration = "NO TIME UNIT DEFINED";
+			case T_NOTIME: 	strDuration = "NO TIME UNIT DEFINED";
+							return; 
 		}
 		strDuration = String.format("%d(d) %02d:%02d:%02d.%03d", d, h, m, s, ms);		
 	}
