@@ -14,11 +14,11 @@ public class test_duration {
 		System.out.println("Duration m:" + String.format("%d", myDuration.mins()));
 		System.out.println("Duration h:" + String.format("%d", myDuration.hours()));
 		System.out.println("Duration d:" + String.format("%d", myDuration.days()));
-		System.out.println("Duration in " + units +":" + myDuration.tostring());
+		System.out.println("Duration in " + units +":" + myDuration.toString());
 		System.out.println("------------------------------------------------------------------");
 		myDuration.set(1234567890l); 
 		System.out.println("Duration value:" + String.format("%d", myDuration.get()));
-		System.out.println("Duration in " + units +":" + myDuration.tostring());
+		System.out.println("Duration in " + units +":" + myDuration.toString());
 		System.out.println("------------------------------------------------------------------");		
 	}
 

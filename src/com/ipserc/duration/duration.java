@@ -172,7 +172,7 @@ public class duration {
 	 * Returns a String representation of the duration expressed in days(d) hours:minutes:seconds.milliseconds
 	 * @return A String representation of the duration expressed in days(d) hours:minutes:seconds.milliseconds
 	 */
-	public String tostring() {
+	public String toString() {
 		return strDuration;
 	}
 }
