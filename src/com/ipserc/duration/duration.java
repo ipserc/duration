@@ -47,11 +47,12 @@ public class duration {
 	 * @param strTimeUnit The duration units in String format. It can be 'ms' for milliseconds, 's' for seconds, 'm' for minutes, 'h' for hours, 'd' for days.
 	 */
 	public duration(long duration, String strTimeUnit) {
-		this.duration = duration;
 		this.strTimeUnit = strTimeUnit;
 		this.t_timeUnit = tTimeUnit(strTimeUnit);
-		time = (double)duration;
-		this.eval();
+		this.set(duration);
+		//this.duration = duration;
+		//time = (double)duration;
+		//this.eval();
 	}
 
 	/*
