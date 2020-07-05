@@ -50,9 +50,6 @@ public class duration {
 		this.strTimeUnit = strTimeUnit;
 		this.t_timeUnit = tTimeUnit(strTimeUnit);
 		this.set(duration);
-		//this.duration = duration;
-		//time = (double)duration;
-		//this.eval();
 	}
 
 	/*
