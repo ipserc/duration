@@ -18,17 +18,8 @@ package com.ipserc.duration;
  */
 public class duration {
 	/*
-	 * CONSTANTS
+	 * ENUMS
 	 */
-	/*
-	final private int T_NOTIME = 0;
-	final private int T_MILLISECS = 1;
-	final private int T_SECS = 2;
-	final private int T_MINS = 3;
-	final private int T_HOURS = 4;
-	final private int T_DAYS = 5;
-	*/
-	
 	private enum timeUnitType {
 		T_NOTIME,
 		T_MILLISECS, 
@@ -106,7 +97,7 @@ public class duration {
 								break;
 			case T_DAYS: 	d = this.duration;
 							break;
-			case T_NOTIME: strDuration = "NO TIME DEFINED";
+			case T_NOTIME: strDuration = "NO TIME UNIT DEFINED";
 		}
 		strDuration = String.format("%d(d) %02d:%02d:%02d.%03d", d, h, m, s, ms);		
 	}
