@@ -7,10 +7,13 @@ package com.ipserc.duration;
  * @author ipserc
  * @date 2020/07/05
  * @version 1.0 (2020_0705_1320)
- * 
- * created 2020/07/05
- * github https://github.com/ipserc
- * license MIT
+ * <p>
+ * created:2020/07/05
+ * <p>
+ * github:https://github.com/ipserc
+ * <p>
+ * license:MIT
+ * <p>
  * 
  */
 public class duration {
